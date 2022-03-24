@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocimetro Com Html5 Css3 JaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Velocimetro de Verificação</h1>
+    <div class="gauge">
+        <div class="progress">
+            <div class="bar"></div>
+            <div class="needle"></div>
+        </div>
+    </div>
+    <div class="msg">
+        <p class="process">Verificando</p>
+        <p class="success">Verificação Concluida</p>
+    </div>
+
+    <script>
+
+        const process_txt = document.querySelector('.process');
+        const success_txt = document.querySelector('.success');
+
+        setTimeout(() => {
+            process_txt.classList.add('active');
+        }, 0)
+
+        setTimeout(toggleMsg, 1600);
+
+        function toggleMsg() {
+            process_txt.classList.remove('active');
+            success_txt.classList.add('active');
+        }
+
+    </script>
+</body>
+
+</html>
